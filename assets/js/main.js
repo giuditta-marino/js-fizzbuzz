@@ -30,12 +30,15 @@ lista.style.listStyle = "none";
 var elementiLista = document.getElementById("lista-numeri").children;
 console.log(elementiLista);
 
-
 // ALL'HOVER DEL MOUSE SULL'LI DESIDERATO CAMBIO IL COLORE
 for (var i = 0; i < elementiLista.length; i++) {
+  console.log(elementiLista[i].firstChild);
+  var aElementiLista = elementiLista[i].firstChild;
   elementiLista[i].style.color = "#1c75bc";
   elementiLista[i].style.fontWeight = "700";
-  elementiLista[i].addEventListener('click', function(e){
+  aElementiLista.addEventListener('click', function(e){
     e.target.style.color = "orange";
+    console.log(e);
   })
+
 }
